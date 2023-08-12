@@ -6,4 +6,8 @@
 
  get the sumstatcombos.txt file to iterate through only viable combinations per replicate to perform SC2 on - loop through per replicate
  cat 100bi_10tricombos.csv | grep "plasma_100_bi" | grep "good" | awk '{print $2}'
- 
+
+
+In directory: /scratch/aahowel3/simulations_replicates/good_combos_sumstats] 
+concatfor_summarystats_plotting.sh - takes all the .filter.csv from each replicate and combines them per combination
+summarystats_plotting.sh - loops each param combination through plot_summarystats_updated_updated.R to get a 5 page 4 plot per page 1 document per parameter combination file of all 4 compartments across the 5 summary statistics 
