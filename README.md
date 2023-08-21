@@ -4,8 +4,8 @@
  HCMV_convert_to_ms.R and HCMV_summarystats.sh then create new 2% MAF filtered .ms files from the original simulation .ms files and run Terbot's sc2 summary statistics scripts on the filtered .ms files
 
 
- get the sumstatcombos.txt file to iterate through only viable combinations per replicate to perform SC2 on - loop through per replicate
- cat 100bi_10tricombos.csv | grep "plasma_100_bi" | grep "good" | awk '{print $2}'
+ get the sumstatcombos.txt file to iterate through only viable combinations per replicate to perform SC2 on - 
+ for i in replicate*; do cat $i/100bi_10tricombos_2.csv | grep "plasma_100_bi" | grep "good" | awk '{print $2}' > $i/sumstatcombos.txt; done 
 
 
 In directory: /scratch/aahowel3/simulations_replicates/good_combos_sumstats] 
